@@ -6,7 +6,7 @@ warnings.filterwarnings("ignore", category = UserWarning, module = "matplotlib")
 #
 # Display inline matplotlib plots with IPython
 from IPython import get_ipython
-get_ipython().run_line_magic('matplotlib', 'inline')
+# sget_ipython().run_line_magic('matplotlib', 'inline')
 ###########################################
 
 import matplotlib.pyplot as pl
@@ -43,6 +43,8 @@ def ModelLearning(X, y):
         train_mean = np.mean(train_scores, axis = 1)
         test_std = np.std(test_scores, axis = 1)
         test_mean = np.mean(test_scores, axis = 1)
+
+        print train_std,train_mean,test_std,test_mean
 
         # Subplot the learning curve 
         ax = fig.add_subplot(2, 2, k+1)
