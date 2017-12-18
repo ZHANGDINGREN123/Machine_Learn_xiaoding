@@ -44,7 +44,8 @@ def ModelLearning(X, y):
         test_std = np.std(test_scores, axis = 1)
         test_mean = np.mean(test_scores, axis = 1)
 
-        print train_std,train_mean,test_std,test_mean
+        # print train_std,train_mean,test_std,test_mean
+        ###
 
         # Subplot the learning curve 
         ax = fig.add_subplot(2, 2, k+1)
@@ -124,7 +125,6 @@ def PredictTrials(X, y, fitter, data):
         # Make a prediction
         pred = reg.predict([data[0]])[0]
         prices.append(pred)
-        
         # Result
         print "Trial {}: ${:,.2f}".format(k+1, pred)
 
