@@ -1,4 +1,6 @@
 from sklearn import tree
+from sympy import *
+dsolve()
 X = [[0, 0], [1, 1]]
 Y = [0, 1]
 clf = tree.DecisionTreeClassifier()
